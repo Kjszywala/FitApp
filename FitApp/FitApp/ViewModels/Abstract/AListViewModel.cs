@@ -48,6 +48,7 @@ namespace FitApp.ViewModels.Abstract
                 IsBusy = false;
             }
         }
+
         public void OnAppearing()
         {
             IsBusy = true;

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:mealsviewmodel="clr-namespace:FitApp.ViewModels.MealsViewModel" 
+             x:DataType="mealsviewmodel:MealsDetailsViewModel"
+             x:Class="FitApp.Views.MealView.MealDetailsPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Meal Name:" FontSize="Medium" />
+            <Label Text="{Binding MealName, Mode=TwoWay}" FontSize="Medium" />
+            <Label Text="Meal Description:" FontSize="Medium" />
+            <Label Text="{Binding MealDescription, Mode=TwoWay}" FontSize="Medium" />
+            <Label Text="Meal Calories:" FontSize="Medium" />
+            <Label Text="{Binding MealCalories, Mode=TwoWay}" FontSize="Medium" Margin="0" />
+            <Label Text="User Name:" FontSize="Medium" />
+            <Label Text="{Binding SelectedUserName, Mode=TwoWay}" FontSize="Medium" Margin="0" />
+            <StackLayout Orientation="Horizontal">
+                <Button Text="Cancel" Command="{Binding CancelCommand}" HorizontalOptions="FillAndExpand"></Button>
+                <Button Text="Delete" Command="{Binding DeleteCommand}" HorizontalOptions="FillAndExpand"></Button>
+                <Button Text="Edit" Command="{Binding AddSinCommand}" HorizontalOptions="FillAndExpand"></Button>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

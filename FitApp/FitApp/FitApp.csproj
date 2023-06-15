@@ -34,7 +34,6 @@
 
   <ItemGroup>
     <Folder Include="Models\" />
-    <Folder Include="ViewModels\MealsViewModel\" />
     <Folder Include="ViewModels\WorkoutsViewModel\" />
     <Folder Include="ViewModels\WorkoutPlansViewModel\" />
     <Folder Include="ViewModels\WorkoutExercisesViewModel\" />
@@ -75,6 +74,18 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\MealFoodItemView\NewMealFoodItemPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\MealView\MealDetailsPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\MealView\MealEditPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\MealView\MealPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\MealView\NewMealPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\UserView\NewUserPage.xaml">
