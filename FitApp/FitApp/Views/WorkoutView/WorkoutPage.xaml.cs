@@ -1,17 +1,18 @@
-﻿using FitApp.ViewModels.UsersViewModel;
+﻿using FitApp.ViewModels.WorkoutsViewModel;
+
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace FitApp.Views.UserView
+namespace FitApp.Views.WorkoutView
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class UserPage : ContentPage
+    public partial class WorkoutPage : ContentPage
     {
-        private UserViewModel _viewModel;
-        public UserPage()
+        private WorkoutsViewModel _viewModel;
+        public WorkoutPage()
         {
             InitializeComponent();
-            BindingContext = _viewModel = new UserViewModel();
+            BindingContext = _viewModel = new WorkoutsViewModel();
         }
         protected override void OnAppearing()
         {

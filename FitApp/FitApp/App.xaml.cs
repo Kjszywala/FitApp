@@ -16,7 +16,7 @@ namespace FitApp
             DependencyService.Register<FoodItemService>();
             DependencyService.Register<MealFoodItemService>();
             DependencyService.Register<MealsModelService>();
-            DependencyService.Register<UserModelService>();
+            DependencyService.Register<WorkoutPlanModelService>();
             DependencyService.Register<WorkoutExercisesService>();
             DependencyService.Register<WorkoutPlansService>();
             DependencyService.Register<WorkoutService>();
