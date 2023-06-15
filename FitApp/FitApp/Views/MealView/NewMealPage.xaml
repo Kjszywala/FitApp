@@ -12,7 +12,7 @@
             <Entry Text="{Binding MealDescription, Mode=TwoWay}" FontSize="Medium" />
             <Label Text="Meal Calories" FontSize="Medium" />
             <Entry Text="{Binding MealCalories, Mode=TwoWay}" FontSize="Medium" />
-            <Picker Title="Food Items" 
+            <Picker Title="Meal" 
                     ItemsSource="{Binding Users}" 
                     ItemDisplayBinding="{Binding UserName}" 
                     SelectedItem="{Binding SelectedUser}" 

@@ -1948,7 +1948,8 @@
             "nullable": true
           },
           "plan": {
-            "$ref": "#/components/schemas/WorkoutPlans"
+            "$ref": "#/components/schemas/WorkoutPlans",
+            "nullable": true
           },
           "workoutExercises": {
             "type": "array",

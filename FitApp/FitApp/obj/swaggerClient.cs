@@ -175,7 +175,7 @@ namespace FitAppApi
                         ProcessResponse(client_, response_);
 
                         var status_ = (int)response_.StatusCode;
-                        if (status_ == 200 || status_ == 201)
+                        if (status_ == 200)
                         {
                             var objectResponse_ = await ReadObjectResponseAsync<Exercises>(response_, headers_, cancellationToken).ConfigureAwait(false);
                             if (objectResponse_.Object == null)
@@ -553,7 +553,7 @@ namespace FitAppApi
                         ProcessResponse(client_, response_);
 
                         var status_ = (int)response_.StatusCode;
-                        if (status_ == 200 || status_ == 201)
+                        if (status_ == 200)
                         {
                             var objectResponse_ = await ReadObjectResponseAsync<FoodItems>(response_, headers_, cancellationToken).ConfigureAwait(false);
                             if (objectResponse_.Object == null)
@@ -931,7 +931,7 @@ namespace FitAppApi
                         ProcessResponse(client_, response_);
 
                         var status_ = (int)response_.StatusCode;
-                        if (status_ == 200 || status_ == 201)
+                        if (status_ == 200)
                         {
                             var objectResponse_ = await ReadObjectResponseAsync<MealFoodItems>(response_, headers_, cancellationToken).ConfigureAwait(false);
                             if (objectResponse_.Object == null)
@@ -1309,7 +1309,7 @@ namespace FitAppApi
                         ProcessResponse(client_, response_);
 
                         var status_ = (int)response_.StatusCode;
-                        if (status_ == 200 || status_ == 201)
+                        if (status_ == 200)
                         {
                             var objectResponse_ = await ReadObjectResponseAsync<Meals>(response_, headers_, cancellationToken).ConfigureAwait(false);
                             if (objectResponse_.Object == null)
@@ -1687,7 +1687,7 @@ namespace FitAppApi
                         ProcessResponse(client_, response_);
 
                         var status_ = (int)response_.StatusCode;
-                        if (status_ == 200 || status_ == 201)
+                        if (status_ == 200)
                         {
                             var objectResponse_ = await ReadObjectResponseAsync<Users>(response_, headers_, cancellationToken).ConfigureAwait(false);
                             if (objectResponse_.Object == null)
@@ -2773,7 +2773,7 @@ namespace FitAppApi
         }
 
         /// <returns>Success</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>
+        /// <exception cref="ApiException">A server side error occurred.</exception>Workouts4
         public virtual System.Threading.Tasks.Task<Workouts> WorkoutsPOSTAsync(Workouts body)
         {
             return WorkoutsPOSTAsync(body, System.Threading.CancellationToken.None);
@@ -2821,7 +2821,7 @@ namespace FitAppApi
                         ProcessResponse(client_, response_);
 
                         var status_ = (int)response_.StatusCode;
-                        if (status_ == 200)
+                        if (status_ == 200 || status_ == 201)
                         {
                             var objectResponse_ = await ReadObjectResponseAsync<Workouts>(response_, headers_, cancellationToken).ConfigureAwait(false);
                             if (objectResponse_.Object == null)
@@ -3517,7 +3517,7 @@ namespace FitAppApi
         [Newtonsoft.Json.JsonProperty("planID", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public int? PlanID { get; set; }
 
-        [Newtonsoft.Json.JsonProperty("plan", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        [Newtonsoft.Json.JsonProperty("plan", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public WorkoutPlans Plan { get; set; }
 
         [Newtonsoft.Json.JsonProperty("workoutExercises", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]

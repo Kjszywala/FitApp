@@ -1,9 +1,15 @@
-﻿using FitApp.Services;
+﻿using FitApp.Helpers;
+using FitApp.Services;
 using FitApp.ViewModels.Abstract;
+using FitApp.ViewModels.MealsViewModel;
+using FitApp.Views.MealView;
 using FitAppApi;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
+using System.Linq;
+using System.Threading.Tasks;
 using Xamarin.Forms;
 
 namespace FitApp.ViewModels.WorkoutsViewModel
@@ -43,7 +49,7 @@ namespace FitApp.ViewModels.WorkoutsViewModel
             set => SetProperty(ref workoutDuration, value);
         }
 
-        public string wWrkoutDifficulty
+        public string WorkoutDifficulty
         {
             get => workoutDifficulty;
             set => SetProperty(ref workoutDifficulty, value);
@@ -83,20 +89,76 @@ namespace FitApp.ViewModels.WorkoutsViewModel
             planModelService = new WorkoutPlansService();
             planModelService.RefreshListFromService();
             plans = planModelService.items;
+
+            Items = new ObservableCollection<Workouts>();
+            LoadItemsCommand = new Command(async () => await ExecuteLoadItemsCommand());
+            AddSinCommand = new Command(async () => await OnEditSelected(ItemId));
         }
+
+      
 
         #endregion
 
         #region Methods
 
-        public override void LoadProperties(Workouts item)
+        public override async void LoadProperties(Workouts item)
         {
-            throw new NotImplementedException();
+            WorkoutName = item.WorkoutName;
+            WorkoutDescription = item.WorkoutDescription;
+            WorkoutDuration = item.WorkoutDuration;
+            WorkoutDifficulty = item.WorkoutDifficulty;
+            SelectedWorkoutName = (await planModelService.GetItemAsync(item.PlanID.Value)).PlanName;
+            this.CopyProperties(item);
+            await ExecuteLoadItemsCommand();
         }
 
-        public override void OnUpdateAsync()
+        public override async void OnUpdateAsync()
         {
-            throw new NotImplementedException();
+            var dataStore = DependencyService.Get<WorkoutService>();
+            var Item = (await dataStore.GetItemsAsync(true)).Where(item => item.WorkoutID == ItemId).First();
+            Item.ModificationDate = DateTime.Now;
+            Item.WorkoutName = this.WorkoutName;
+            Item.WorkoutDescription = this.WorkoutDescription;
+            Item.WorkoutDuration = this.WorkoutDuration;
+            Item.WorkoutDifficulty = this.WorkoutDifficulty;
+            Item.PlanID = this.selectedPlan.PlanId;
+            await DataStore.UpdateItemAsync(Item);
+            await Shell.Current.GoToAsync("..");
+        }
+
+        public async Task OnEditSelected(int itemId)
+        {
+            var dataStore = DependencyService.Get<WorkoutService>();
+            var item = (await dataStore.GetItemsAsync(true)).Where(item2 => item2.WorkoutID == itemId).First();
+            LoadProperties(item);
+            if (item == null)
+            {
+                return;
+            }
+            await Shell.Current.GoToAsync($"{nameof(MealEditPage)}?{nameof(MealsDetailsViewModel.ItemId)}={item.WorkoutID}");
+        }
+
+        public async Task ExecuteLoadItemsCommand()
+        {
+            IsBusy = true;
+            try
+            {
+                Items.Clear();
+                var dataStore = DependencyService.Get<WorkoutService>();
+                var items = (await dataStore.GetItemsAsync(true)).Where(item2 => item2.WorkoutID == this.ItemId);
+                foreach (var item in items)
+                {
+                    Items.Add(item);
+                }
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex);
+            }
+            finally
+            {
+                IsBusy = false;
+            }
         }
 
         #endregion

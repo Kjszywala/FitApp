@@ -84,7 +84,10 @@ namespace FitApp.ViewModels.MealsViewModel
                 MealName = this.MealName,
                 MealDescription = this.MealDescription,
                 MealCalories = this.MealCalories,
-                UserID = this.selectedUser.UserID
+                UserID = this.selectedUser.UserID,
+                CreationDate = DateTime.Now,
+                ModificationDate = DateTime.Now,
+                IsActive = true
             }.CopyProperties(this);
         }
 
