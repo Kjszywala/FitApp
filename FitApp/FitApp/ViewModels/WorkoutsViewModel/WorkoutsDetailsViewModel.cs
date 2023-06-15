@@ -1,11 +1,9 @@
 ﻿using FitApp.Services;
 using FitApp.ViewModels.Abstract;
-using FitApp.Views.MealView;
 using FitAppApi;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Text;
 using Xamarin.Forms;
 
 namespace FitApp.ViewModels.WorkoutsViewModel
@@ -21,7 +19,7 @@ namespace FitApp.ViewModels.WorkoutsViewModel
         private string selectedWorkoutName;
         private WorkoutPlans selectedPlan;
         private List<WorkoutPlans> plans;
-        private WorkoutPlanModelService planModelService;
+        private WorkoutPlansService planModelService;
 
         #endregion
 
@@ -82,9 +80,9 @@ namespace FitApp.ViewModels.WorkoutsViewModel
         public WorkoutsDetailsViewModel()
             : base()
         {
-            planModelService = new WorkoutPlanModelService();
+            planModelService = new WorkoutPlansService();
             planModelService.RefreshListFromService();
-
+            plans = planModelService.items;
         }
 
         #endregion

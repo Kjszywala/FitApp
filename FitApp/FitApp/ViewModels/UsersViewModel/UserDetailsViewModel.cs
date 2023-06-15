@@ -136,7 +136,7 @@ namespace FitApp.ViewModels.UsersViewModel
             try
             {
                 Items.Clear();
-                var dataStore = DependencyService.Get<WorkoutPlanModelService>();
+                var dataStore = DependencyService.Get<UserModelService>();
                 var items = (await dataStore.GetItemsAsync(true)).Where(item => item.UserID == Id);
                 foreach (var item in items)
                 {
@@ -155,7 +155,7 @@ namespace FitApp.ViewModels.UsersViewModel
 
         public async Task OnEditSelected(int id)
         {
-            var dataStore = DependencyService.Get<WorkoutPlanModelService>();
+            var dataStore = DependencyService.Get<UserModelService>();
             var item = (await dataStore.GetItemsAsync(true)).Where(item2 => item2.UserID == id).First();
             LoadProperties(item);
             if (item == null)
@@ -167,7 +167,7 @@ namespace FitApp.ViewModels.UsersViewModel
 
         public override async void OnUpdateAsync()
         {
-            var dataStore = DependencyService.Get<WorkoutPlanModelService>();
+            var dataStore = DependencyService.Get<UserModelService>();
             var Item = (await dataStore.GetItemsAsync(true)).Where(item => item.UserID == ItemId).First();
             Item.ModificationDate = DateTime.Now;
             Item.UserName = this.UserName;

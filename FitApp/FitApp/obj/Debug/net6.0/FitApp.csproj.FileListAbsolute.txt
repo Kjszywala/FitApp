@@ -1,0 +1,12 @@
+C:\Users\kamil\Desktop\MobilneApp2\FitApp\FitApp\FitApp\obj\Debug\net6.0\FitApp.csproj.AssemblyReference.cache
+C:\Users\kamil\Desktop\MobilneApp2\FitApp\FitApp\FitApp\obj\Debug\net6.0\FitApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\kamil\Desktop\MobilneApp2\FitApp\FitApp\FitApp\obj\Debug\net6.0\App.xaml.g.cs
+C:\Users\kamil\Desktop\MobilneApp2\FitApp\FitApp\FitApp\obj\Debug\net6.0\AppShell.xaml.g.cs
+C:\Users\kamil\Desktop\MobilneApp2\FitApp\FitApp\FitApp\obj\Debug\net6.0\Views\AboutPage.xaml.g.cs
+C:\Users\kamil\Desktop\MobilneApp2\FitApp\FitApp\FitApp\obj\Debug\net6.0\Views\ExerciseView\ExerciseDetailsPage.xaml.g.cs
+C:\Users\kamil\Desktop\MobilneApp2\FitApp\FitApp\FitApp\obj\Debug\net6.0\Views\ExerciseView\ExercisePage.xaml.g.cs
+C:\Users\kamil\Desktop\MobilneApp2\FitApp\FitApp\FitApp\obj\Debug\net6.0\Views\LoginPage.xaml.g.cs
+C:\Users\kamil\Desktop\MobilneApp2\FitApp\FitApp\FitApp\obj\Debug\net6.0\Views\NewItemPage.xaml.g.cs
+C:\Users\kamil\Desktop\MobilneApp2\FitApp\FitApp\FitApp\obj\Debug\net6.0\FitApp.AssemblyInfoInputs.cache
+C:\Users\kamil\Desktop\MobilneApp2\FitApp\FitApp\FitApp\obj\Debug\net6.0\FitApp.AssemblyInfo.cs
+C:\Users\kamil\Desktop\MobilneApp2\FitApp\FitApp\FitApp\obj\Debug\net6.0\FitApp.csproj.CoreCompileInputs.cache

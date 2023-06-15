@@ -23,7 +23,7 @@ namespace FitApp.ViewModels.MealsViewModel
         private string selectedUserName;
         private Users selectedUser;
         private List<Users> users;
-        private WorkoutPlanModelService userModelService;
+        private UserModelService userModelService;
 
         #endregion
 
@@ -77,7 +77,7 @@ namespace FitApp.ViewModels.MealsViewModel
         public MealsDetailsViewModel() 
             : base()
         {
-            userModelService = new WorkoutPlanModelService();
+            userModelService = new UserModelService();
             userModelService.RefreshListFromService();
             users = userModelService.items;
 

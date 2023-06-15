@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace FitApp.Services
 {
-    public class WorkoutPlanModelService : AListDataStore<Users>
+    public class UserModelService : AListDataStore<Users>
     {
-        public WorkoutPlanModelService() :
+        public UserModelService() :
             base()
         {
         }
