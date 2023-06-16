@@ -34,7 +34,7 @@ namespace FitApp
             Routing.RegisterRoute(nameof(MealDetailsPage), typeof(MealDetailsPage));
             Routing.RegisterRoute(nameof(MealEditPage), typeof(MealEditPage));
 
-            Routing.RegisterRoute(nameof(WorkoutPage), typeof(WorkoutPage));
+            Routing.RegisterRoute(nameof(WorkoutEditPage), typeof(WorkoutEditPage));
             Routing.RegisterRoute(nameof(WorkoutDetailsPage), typeof(WorkoutDetailsPage));
             Routing.RegisterRoute(nameof(NewWorkoutPage), typeof(NewWorkoutPage));
         }
