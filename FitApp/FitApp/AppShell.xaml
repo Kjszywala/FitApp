@@ -18,7 +18,32 @@
     -->
 
     <Shell.Resources>
+        
         <ResourceDictionary>
+            <Style x:Key="FlyoutItemStyle" TargetType="Shell">
+                <Setter Property="MenuItemTemplate">
+                    <Setter.Value>
+                        <DataTemplate>
+                            <Grid BackgroundColor="#F2F2F2" Padding="10">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <Image Source="{Binding FlyoutItem.Icon}"
+                                   HeightRequest="24"
+                                   WidthRequest="24"
+                                   VerticalOptions="Center" />
+                                <Label Text="{Binding FlyoutItem.Title}"
+                                   TextColor="#333333"
+                                   FontFamily="Arial"
+                                   FontSize="16"
+                                   VerticalOptions="Center"
+                                   Grid.Column="1" />
+                            </Grid>
+                        </DataTemplate>
+                    </Setter.Value>
+                </Setter>
+            </Style>
             <Style x:Key="BaseStyle" TargetType="Element">
                 <Setter Property="Shell.BackgroundColor" Value="{StaticResource Primary}" />
                 <Setter Property="Shell.ForegroundColor" Value="White" />
@@ -59,7 +84,6 @@
                     </VisualStateGroupList>
                 </Setter>
             </Style>
-
             <!--
             Custom Style you can apply to any Flyout Item
             -->

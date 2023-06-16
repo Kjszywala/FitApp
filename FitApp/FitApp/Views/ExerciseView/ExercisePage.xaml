@@ -6,7 +6,7 @@
              x:Class="FitApp.Views.ExerciseView.ExercisePage">
 
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Add" Command="{Binding AddItemCommand}" />
+        <ToolbarItem Text="Add" Command="{Binding AddItemCommand}"/>
     </ContentPage.ToolbarItems>
 
     <RefreshView x:DataType="local:ExerciseViewModel" Command="{Binding LoadItemsCommand}" IsRefreshing="{Binding IsBusy, Mode=TwoWay}">
