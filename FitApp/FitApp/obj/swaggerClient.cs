@@ -2773,7 +2773,7 @@ namespace FitAppApi
         }
 
         /// <returns>Success</returns>
-        /// <exception cref="ApiException">A server side error occurred.</exception>Workouts4
+        /// <exception cref="ApiException">A server side error occurred.</exception>
         public virtual System.Threading.Tasks.Task<Workouts> WorkoutsPOSTAsync(Workouts body)
         {
             return WorkoutsPOSTAsync(body, System.Threading.CancellationToken.None);
@@ -2821,7 +2821,7 @@ namespace FitAppApi
                         ProcessResponse(client_, response_);
 
                         var status_ = (int)response_.StatusCode;
-                        if (status_ == 200 || status_ == 201)
+                        if (status_ == 200)
                         {
                             var objectResponse_ = await ReadObjectResponseAsync<Workouts>(response_, headers_, cancellationToken).ConfigureAwait(false);
                             if (objectResponse_.Object == null)
@@ -3473,7 +3473,7 @@ namespace FitAppApi
         [Newtonsoft.Json.JsonProperty("userID", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public int? UserID { get; set; }
 
-        [Newtonsoft.Json.JsonProperty("user", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        [Newtonsoft.Json.JsonProperty("user", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public Users User { get; set; }
 
         [Newtonsoft.Json.JsonProperty("workouts", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]

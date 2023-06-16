@@ -16,9 +16,9 @@
                 <DataTemplate>
                     <StackLayout Padding="10" x:DataType="model:Workouts">
                         <Label Text="{Binding WorkoutName}" 
-                            LineBreakMode="NoWrap" 
-                            Style="{DynamicResource ListItemTextStyle}" 
-                            FontSize="16" />
+                            LineBreakMode="NoWrap"
+                            Style="{DynamicResource ListItemDetailTextStyle}"
+                            FontSize="13" />
                         <Label Text="{Binding WorkoutDescription}" 
                             LineBreakMode="NoWrap"
                             Style="{DynamicResource ListItemDetailTextStyle}"
@@ -34,7 +34,7 @@
                         <StackLayout.GestureRecognizers>
                             <TapGestureRecognizer 
                                 NumberOfTapsRequired="1"
-                                Command="{Binding Source={RelativeSource AncestorType={x:Type local:WorkoutsViewModel}}, Path=ItemTapped}"      
+                                Command="{Binding Source={RelativeSource AncestorType={x:Type local:WorkoutsViewModel}}, Path=ItemTapped}"		
                                 CommandParameter="{Binding .}">
                             </TapGestureRecognizer>
                         </StackLayout.GestureRecognizers>

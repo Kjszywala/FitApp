@@ -8,7 +8,7 @@ namespace FitApp.ViewModels.WorkoutsViewModel
     public class WorkoutsViewModel : AListViewModel<Workouts>
     {
         public WorkoutsViewModel()
-            : base("Workout")
+            : base("Workouts")
         {
         }
 

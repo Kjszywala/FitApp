@@ -5,7 +5,7 @@ using Xamarin.Forms;
 
 namespace FitApp.ViewModels.UsersViewModel
 {
-    internal class UserViewModel : AListViewModel<Users>
+    public class UserViewModel : AListViewModel<Users>
     {
         public UserViewModel()
             : base("User")

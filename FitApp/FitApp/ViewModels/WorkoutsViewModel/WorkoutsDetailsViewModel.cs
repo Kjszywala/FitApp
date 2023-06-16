@@ -1,8 +1,7 @@
 ﻿using FitApp.Helpers;
 using FitApp.Services;
 using FitApp.ViewModels.Abstract;
-using FitApp.ViewModels.MealsViewModel;
-using FitApp.Views.MealView;
+using FitApp.Views.WorkoutView;
 using FitAppApi;
 using System;
 using System.Collections.Generic;
@@ -95,8 +94,6 @@ namespace FitApp.ViewModels.WorkoutsViewModel
             AddSinCommand = new Command(async () => await OnEditSelected(ItemId));
         }
 
-      
-
         #endregion
 
         #region Methods
@@ -135,7 +132,7 @@ namespace FitApp.ViewModels.WorkoutsViewModel
             {
                 return;
             }
-            await Shell.Current.GoToAsync($"{nameof(MealEditPage)}?{nameof(MealsDetailsViewModel.ItemId)}={item.WorkoutID}");
+            await Shell.Current.GoToAsync($"{nameof(WorkoutEditPage)}?{nameof(WorkoutsDetailsViewModel.ItemId)}={item.WorkoutID}");
         }
 
         public async Task ExecuteLoadItemsCommand()

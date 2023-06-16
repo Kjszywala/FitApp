@@ -1,14 +1,10 @@
-﻿using FitApp.ViewModels;
-using FitApp.ViewModels.WorkoutsViewModel;
-using FitApp.Views;
-using FitApp.Views.ExerciseView;
+﻿using FitApp.Views.ExerciseView;
 using FitApp.Views.FoodItemView;
 using FitApp.Views.MealFoodItemView;
 using FitApp.Views.MealView;
 using FitApp.Views.UserView;
 using FitApp.Views.WorkoutView;
 using System;
-using System.Collections.Generic;
 using Xamarin.Forms;
 
 namespace FitApp

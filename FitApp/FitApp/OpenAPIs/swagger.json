@@ -1888,7 +1888,8 @@
             "nullable": true
           },
           "user": {
-            "$ref": "#/components/schemas/Users"
+            "$ref": "#/components/schemas/Users",
+            "nullable": true
           },
           "workouts": {
             "type": "array",
