@@ -4,6 +4,21 @@
              xmlns:local="clr-namespace:FitApp.ViewModels.WorkoutsViewModel" 
              xmlns:model="clr-namespace:FitAppApi"
              x:Class="FitApp.Views.WorkoutView.WorkoutPage">
+
+    <ContentPage.Resources>
+        <Style x:Key="LabelTitleStyle" TargetType="Label">
+            <Setter Property="FontSize" Value="16" />
+            <Setter Property="FontAttributes" Value="Bold" />
+            <Setter Property="Margin" Value="0,0,0,5" />
+        </Style>
+
+        <Style x:Key="LabelDetailStyle" TargetType="Label">
+            <Setter Property="FontSize" Value="14" />
+            <Setter Property="TextColor" Value="#555555" />
+            <Setter Property="Margin" Value="0,0,0,10" />
+        </Style>
+    </ContentPage.Resources>
+
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Add" Command="{Binding AddItemCommand}" />
     </ContentPage.ToolbarItems>
@@ -16,21 +31,17 @@
                 <DataTemplate>
                     <StackLayout Padding="10" x:DataType="model:Workouts">
                         <Label Text="{Binding WorkoutName}" 
-                            LineBreakMode="NoWrap"
-                            Style="{DynamicResource ListItemDetailTextStyle}"
-                            FontSize="13" />
+                           LineBreakMode="NoWrap"
+                           Style="{StaticResource LabelTitleStyle}" />
                         <Label Text="{Binding WorkoutDescription}" 
-                            LineBreakMode="NoWrap"
-                            Style="{DynamicResource ListItemDetailTextStyle}"
-                            FontSize="13" />
+                           LineBreakMode="NoWrap"
+                           Style="{StaticResource LabelDetailStyle}" />
                         <Label Text="{Binding WorkoutDuration}" 
-                            LineBreakMode="NoWrap"
-                            Style="{DynamicResource ListItemDetailTextStyle}"
-                            FontSize="13" />
+                           LineBreakMode="NoWrap"
+                           Style="{StaticResource LabelDetailStyle}" />
                         <Label Text="{Binding WorkoutDifficulty}" 
-                            LineBreakMode="NoWrap"
-                            Style="{DynamicResource ListItemDetailTextStyle}"
-                            FontSize="13" />
+                           LineBreakMode="NoWrap"
+                           Style="{StaticResource LabelDetailStyle}" />     
                         <StackLayout.GestureRecognizers>
                             <TapGestureRecognizer 
                                 NumberOfTapsRequired="1"
