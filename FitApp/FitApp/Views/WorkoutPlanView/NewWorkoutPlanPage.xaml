@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:workoutplansviewmodel="clr-namespace:FitApp.ViewModels.WorkoutPlansViewModel" 
+             x:DataType="workoutplansviewmodel:NewWorkoutPlanViewModel"
+             x:Class="FitApp.Views.WorkoutPlanView.NewWorkoutPlanPage">
+    <ContentPage.Content>
+        <StackLayout Spacing="3" Padding="15">
+            <Label Text="Plan Name" FontSize="Medium" />
+            <Entry Text="{Binding PlanName, Mode=TwoWay}" FontSize="Medium" />
+            <Label Text="Plan Description" FontSize="Medium" />
+            <Entry Text="{Binding PlanDescription, Mode=TwoWay}" FontSize="Medium" />
+            <Label Text="Plan Duration" FontSize="Medium" />
+            <Entry Text="{Binding PlanDuration, Mode=TwoWay}" FontSize="Medium" />
+            <Label Text="Difficulty" FontSize="Medium" />
+            <Entry Text="{Binding PlanDifficulty, Mode=TwoWay}" FontSize="Medium" />
+            <Picker Title="User" 
+                    ItemsSource="{Binding Users}" 
+                    ItemDisplayBinding="{Binding UserName}" 
+                    SelectedItem="{Binding SelectedUser}" 
+                    FontSize="Medium" Margin="0" />
+            <StackLayout Orientation="Horizontal">
+                <Button Text="Save" IsEnabled="true" Command="{Binding SaveCommand}" HorizontalOptions="FillAndExpand"></Button>
+                <Button Text="Cancel" Command="{Binding CancelCommand}" HorizontalOptions="FillAndExpand"></Button>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -8,6 +8,8 @@
        xmlns:localMealUser="clr-namespace:FitApp.Views.UserView"
        xmlns:localMeal="clr-namespace:FitApp.Views.MealView"
        xmlns:localWorkout="clr-namespace:FitApp.Views.WorkoutView"
+       xmlns:localWorkoutPlan="clr-namespace:FitApp.Views.WorkoutPlanView"
+       xmlns:localWorkoutExercise="clr-namespace:FitApp.Views.WorkoutExerciseView"
        Title="FitApp"
        x:Class="FitApp.AppShell">
 
@@ -125,13 +127,21 @@
     </FlyoutItem>
 
     <FlyoutItem Title="Meals" Icon="icon_feed.png">
-        <ShellContent Route="MealPage" ContentTemplate="{DataTemplate localMeal:MealPage}" />
+        <ShellContent Route="MealPage" ContentTemplate="{DataTemplate localMeal:MealPage}" /> 
     </FlyoutItem>
 
     <FlyoutItem Title="Workouts" Icon="icon_feed.png">
         <ShellContent Route="WorkoutPage" ContentTemplate="{DataTemplate localWorkout:WorkoutPage}" />
     </FlyoutItem>
 
+    <FlyoutItem Title="Workout Plans" Icon="icon_feed.png">
+        <ShellContent Route="WorkoutPlanPage" ContentTemplate="{DataTemplate localWorkoutPlan:WorkoutPlanPage}" />
+    </FlyoutItem>
+
+    <FlyoutItem Title="Workout Exercise" Icon="icon_feed.png">
+        <ShellContent Route="WorkoutExercisePage" ContentTemplate="{DataTemplate localWorkoutExercise:WorkoutExercisePage}" />
+    </FlyoutItem>
+    
     <FlyoutItem Title="About" Icon="icon_about.png">
         <ShellContent Route="AboutPage" ContentTemplate="{DataTemplate local:AboutPage}" />
     </FlyoutItem>

@@ -3417,13 +3417,13 @@ namespace FitAppApi
         [Newtonsoft.Json.JsonProperty("exerciseID", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public int? ExerciseID { get; set; }
 
-        [Newtonsoft.Json.JsonProperty("exercise", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        [Newtonsoft.Json.JsonProperty("exercise", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public Exercises Exercise { get; set; }
 
         [Newtonsoft.Json.JsonProperty("workoutID", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public int? WorkoutID { get; set; }
 
-        [Newtonsoft.Json.JsonProperty("workout", Required = Newtonsoft.Json.Required.DisallowNull, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
+        [Newtonsoft.Json.JsonProperty("workout", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public Workouts Workout { get; set; }
 
         [Newtonsoft.Json.JsonProperty("sets", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]

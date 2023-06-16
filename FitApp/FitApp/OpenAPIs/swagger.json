@@ -1815,7 +1815,8 @@
             "nullable": true
           },
           "exercise": {
-            "$ref": "#/components/schemas/Exercises"
+            "$ref": "#/components/schemas/Exercises",
+            "nullable": true
           },
           "workoutID": {
             "type": "integer",
@@ -1823,7 +1824,8 @@
             "nullable": true
           },
           "workout": {
-            "$ref": "#/components/schemas/Workouts"
+            "$ref": "#/components/schemas/Workouts",
+            "nullable": true
           },
           "sets": {
             "type": "string",

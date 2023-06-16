@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:workoutexercisesviewmodel="clr-namespace:FitApp.ViewModels.WorkoutExercisesViewModel" 
+             x:DataType="workoutexercisesviewmodel:WorkoutExercisesDetailsViewModel"
+             x:Class="FitApp.Views.WorkoutExerciseView.WorkoutExerciseDetailsPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Sets" FontSize="Medium" />
+            <Label Text="{Binding Sets, Mode=TwoWay}" FontSize="Medium" Margin="0" />
+            <Label Text="Reps" FontSize="Medium" />
+            <Label Text="{Binding Reps, Mode=TwoWay}" FontSize="Medium" Margin="0" />
+            <Label Text="Weight" FontSize="Medium" />
+            <Label Text="{Binding Weight, Mode=TwoWay}" FontSize="Medium" Margin="0" />
+            <Label Text="Exercise:" FontSize="Medium" />
+            <Label Text="{Binding SelectedExerciseName, Mode=TwoWay}" FontSize="Medium" />
+            <Label Text="Workout" FontSize="Medium" />
+            <Label Text="{Binding SelectedWorkoutName, Mode=TwoWay}" FontSize="Medium" />
+            <StackLayout Orientation="Horizontal">
+                <Button Text="Cancel" Command="{Binding CancelCommand}" HorizontalOptions="FillAndExpand"></Button>
+                <Button Text="Delete" Command="{Binding DeleteCommand}" HorizontalOptions="FillAndExpand"></Button>
+                <Button Text="Edit" Command="{Binding AddSinCommand}" HorizontalOptions="FillAndExpand"></Button>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
