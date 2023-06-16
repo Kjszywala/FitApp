@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\kamil.szywala\\Desktop\\FitApp\\FitApp\\FitApp.Api\\FitApp.Api.csproj": {}
+    "C:\\Users\\kamil.szywala\\Desktop\\FitApp2\\FitApp\\FitApp.Api\\FitApp.Api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\kamil.szywala\\Desktop\\FitApp\\FitApp\\FitApp.Api\\FitApp.Api.csproj": {
+    "C:\\Users\\kamil.szywala\\Desktop\\FitApp2\\FitApp\\FitApp.Api\\FitApp.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\kamil.szywala\\Desktop\\FitApp\\FitApp\\FitApp.Api\\FitApp.Api.csproj",
+        "projectUniqueName": "C:\\Users\\kamil.szywala\\Desktop\\FitApp2\\FitApp\\FitApp.Api\\FitApp.Api.csproj",
         "projectName": "FitApp.Api",
-        "projectPath": "C:\\Users\\kamil.szywala\\Desktop\\FitApp\\FitApp\\FitApp.Api\\FitApp.Api.csproj",
+        "projectPath": "C:\\Users\\kamil.szywala\\Desktop\\FitApp2\\FitApp\\FitApp.Api\\FitApp.Api.csproj",
         "packagesPath": "C:\\Users\\kamil.szywala\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\kamil.szywala\\Desktop\\FitApp\\FitApp\\FitApp.Api\\obj\\",
+        "outputPath": "C:\\Users\\kamil.szywala\\Desktop\\FitApp2\\FitApp\\FitApp.Api\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

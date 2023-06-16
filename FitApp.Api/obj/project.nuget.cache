@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "TyAhQ1BuJKYIfUrZkXkvAww0R6UCQlZNwys7VdlddWqPMRfla+pQ1XnMOAI1acv9rZHg+Xy8t0+XU4wHDm7gDw==",
+  "dgSpecHash": "mt5uDTaUZfr1REeosCbZzEYVOBiMO9KmbrLrVANtkonlHpyMT3E1KzunsxWpl/pSrPbOtumBtWgYvl7Y/tUyFQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\kamil.szywala\\Desktop\\FitApp\\FitApp\\FitApp.Api\\FitApp.Api.csproj",
+  "projectFilePath": "C:\\Users\\kamil.szywala\\Desktop\\FitApp2\\FitApp\\FitApp.Api\\FitApp.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\kamil.szywala\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\kamil.szywala\\.nuget\\packages\\messagepack\\2.1.152\\messagepack.2.1.152.nupkg.sha512",

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "/AKBb7WDGYQWsi5aClO3sYOSrMBo5MyESvAIUISeIXOsRmElMyQhHcZuZ2Ttkg+k5AvdsY4fFCtKVx0vVlafmg==",
+  "dgSpecHash": "sLe4rmIIWVadf9l2XIDsTmhSydNhKQAz43GleMOWUtxZSrGGB0MNN++exuHNb6cCOpVvr0R/Gdt/MMKUKdLXrQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\kamil.szywala\\Desktop\\FitApp\\FitApp\\FitApp\\FitApp\\FitApp.csproj",
+  "projectFilePath": "C:\\Users\\kamil.szywala\\Desktop\\FitApp2\\FitApp\\FitApp\\FitApp\\FitApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\kamil.szywala\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\6.0.0\\microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",
     "C:\\Users\\kamil.szywala\\.nuget\\packages\\microsoft.extensions.apidescription.client\\6.0.16\\microsoft.extensions.apidescription.client.6.0.16.nupkg.sha512",
