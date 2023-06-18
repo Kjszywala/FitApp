@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:bmiviewmodel="clr-namespace:FitApp.ViewModels.BmiViewModel" 
+             x:DataType="bmiviewmodel:BmiViewModel"
+             x:Class="FitApp.Views.BmiView.BmiPage">
+    <ContentPage.Content>
+        <StackLayout Padding="20">
+            <Label Text="Weight:" FontSize="Medium" />
+            <Entry Text="{Binding WeightEntry, Mode=TwoWay}" FontSize="Medium" Placeholder="Enter your weight (in kg)"/>
+            <Label Text="Height:" FontSize="Medium" />
+            <Entry Text="{Binding HeightEntry, Mode=TwoWay}" FontSize="Medium" Placeholder="Enter your height (in cm)"/>
+            <StackLayout Orientation="Horizontal">
+                <Button Text="Calculate" Command="{Binding SetBmi}" HorizontalOptions="FillAndExpand"></Button>
+            </StackLayout>
+            <Label Text="BMI: " FontSize="Medium" />
+            <Label Text="{Binding Bmi, Mode=TwoWay}"  FontSize="Medium" Margin="0" />
+            <Label Text="Your BMI: " FontSize="Large" Margin="0,20,0,0"/>
+            <Label Text="{Binding YourBmi, Mode=TwoWay}" FontSize="Small"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

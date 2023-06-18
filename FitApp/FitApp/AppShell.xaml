@@ -10,6 +10,7 @@
        xmlns:localWorkout="clr-namespace:FitApp.Views.WorkoutView"
        xmlns:localWorkoutPlan="clr-namespace:FitApp.Views.WorkoutPlanView"
        xmlns:localWorkoutExercise="clr-namespace:FitApp.Views.WorkoutExerciseView"
+       xmlns:localBmi="clr-namespace:FitApp.Views.BmiView"
        Title="FitApp"
        x:Class="FitApp.AppShell">
 
@@ -141,7 +142,11 @@
     <FlyoutItem Title="Workout Exercise" Icon="icon_feed.png">
         <ShellContent Route="WorkoutExercisePage" ContentTemplate="{DataTemplate localWorkoutExercise:WorkoutExercisePage}" />
     </FlyoutItem>
-    
+
+    <FlyoutItem Title="Bmi Counter" Icon="icon_feed.png">
+        <ShellContent Route="BmiPage" ContentTemplate="{DataTemplate localBmi:BmiPage}" />
+    </FlyoutItem>
+
     <FlyoutItem Title="About" Icon="icon_about.png">
         <ShellContent Route="AboutPage" ContentTemplate="{DataTemplate local:AboutPage}" />
     </FlyoutItem>
