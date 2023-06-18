@@ -143,7 +143,7 @@
         <ShellContent Route="WorkoutExercisePage" ContentTemplate="{DataTemplate localWorkoutExercise:WorkoutExercisePage}" />
     </FlyoutItem>
 
-    <FlyoutItem Title="Bmi Counter" Icon="icon_feed.png">
+    <FlyoutItem Title="Bmi Counter" Style="{StaticResource FlyoutItemStyle}" Icon="icon_heart.png">
         <ShellContent Route="BmiPage" ContentTemplate="{DataTemplate localBmi:BmiPage}" />
     </FlyoutItem>
 

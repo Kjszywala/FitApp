@@ -1,4 +1,5 @@
 ﻿using FitApp.BusinessLogic;
+using System;
 using Xamarin.Forms;
 
 namespace FitApp.ViewModels.BmiViewModel
@@ -57,12 +58,12 @@ namespace FitApp.ViewModels.BmiViewModel
 
         public void SetBmiLabel()
         {
-            Bmi = (double)CalculateBmi.CalculateBmiMethod(WeightEntry, HeightEntry);
+            Bmi = Math.Round((double)CalculateBmi.CalculateBmiMethod(WeightEntry, HeightEntry),2);
         }
 
         public void SetYourBmiLabel()
         {
-            YourBmi = (double)CalculateBmi.GetYourBmi(1);
+            YourBmi = Math.Round((double)CalculateBmi.GetYourBmi(1),2);
         }
 
         #endregion
