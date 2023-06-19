@@ -1,6 +1,5 @@
 ﻿using FitApp.Services;
 using FitAppApi;
-using System.Linq;
 
 namespace FitApp.BusinessLogic
 {

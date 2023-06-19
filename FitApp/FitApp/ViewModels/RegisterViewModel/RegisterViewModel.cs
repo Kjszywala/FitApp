@@ -133,6 +133,7 @@ namespace FitApp.ViewModels.RegisterViewModel
                 Title = "User"
             };
             await userModelService.AddItemAsync(user);
+            await Shell.Current.GoToAsync($"//{nameof(LoginPage)}");
         }
 
         public async Task OnCancel()

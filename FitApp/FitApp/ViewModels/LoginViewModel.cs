@@ -47,7 +47,7 @@ namespace FitApp.ViewModels
         {
             userModelService = new UserModelService();
             RegisterCommand = new Command(OnRegisterClicked);
-            LoginCommand = new Command(OnRegisterClicked);
+            LoginCommand = new Command(OnLoginClicked);
         }
 
         #endregion
@@ -71,16 +71,12 @@ namespace FitApp.ViewModels
                     {
                         Config.IsLoggedIn = true;
                         Config.UserId = item.UserID;
-                        await Shell.Current.GoToAsync(nameof(ExercisePage));
+                        await Shell.Current.GoToAsync($"//{nameof(ExercisePage)}");
                     }
                     else
                     {
-                        Error = "Wrong password!";
+                        Error = "Wrong login or password!";
                     }
-                }
-                else
-                {
-                    Error = "Wrong user name!";
                 }
             }
         }
