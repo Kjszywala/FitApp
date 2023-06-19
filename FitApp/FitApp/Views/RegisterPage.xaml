@@ -27,6 +27,7 @@
                 <Editor Text="{Binding Height, Mode=TwoWay}" AutoSize="TextChanges" FontSize="Medium" Margin="0" />
                 <Label Text="Activity level" FontSize="Medium" />
                 <Editor Text="{Binding ActivityLevel, Mode=TwoWay}" AutoSize="TextChanges" FontSize="Medium" Margin="0" />
+                <Label Text="{Binding Error}" FontSize="Medium" TextColor="Red"/>
                 <StackLayout Orientation="Horizontal">
                     <Button Text="Register" IsEnabled="true" Command="{Binding RegisterUser}" HorizontalOptions="FillAndExpand"></Button>
                     <Button Text="Cancel" Command="{Binding CancelCommand}" HorizontalOptions="FillAndExpand"></Button>

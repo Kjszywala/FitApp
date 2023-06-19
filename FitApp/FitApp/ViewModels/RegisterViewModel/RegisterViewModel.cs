@@ -22,6 +22,7 @@ namespace FitApp.ViewModels.RegisterViewModel
         private decimal weight;
         private decimal height;
         private string activityLevel;
+        private string error;
         private UserModelService userModelService;
 
         #endregion Fields
@@ -94,6 +95,12 @@ namespace FitApp.ViewModels.RegisterViewModel
             set => SetProperty(ref activityLevel, value);
         }
 
+        public string Error
+        {
+            get => error;
+            set => SetProperty(ref error, value);
+        }
+
         public Command RegisterUser { get; }
         public Command CancelCommand { get; }
         #endregion
@@ -113,6 +120,15 @@ namespace FitApp.ViewModels.RegisterViewModel
 
         public async Task RegisterAsync()
         {
+            var users = userModelService.GetItemsAsync().Result;
+            foreach(var item in users)
+            {
+                if(item.UserName.Trim() == this.UserName.Trim())
+                {
+                    this.Error = "User name already exist!";
+                    await Shell.Current.GoToAsync($"//{nameof(RegisterPage)}");
+                }
+            }
             var user = new Users()
             {
                 CreationDate = DateTime.Now,
