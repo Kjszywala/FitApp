@@ -114,6 +114,7 @@ namespace FitApp.ViewModels.UsersViewModel
 
         public override async void LoadProperties(Users item)
         {
+            
             UserName = item.UserName;
             Password = item.Password;
             Email = item.Email;

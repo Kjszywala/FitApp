@@ -123,10 +123,6 @@
         <ShellContent Route="MealFoodItemPage" ContentTemplate="{DataTemplate localMealFoodItem:MealFoodItemPagePage}" />
     </FlyoutItem>
 
-    <FlyoutItem Title="Users" Icon="icon_feed.png">
-        <ShellContent Route="UserPage" ContentTemplate="{DataTemplate localMealUser:UserPage}" />
-    </FlyoutItem>
-
     <FlyoutItem Title="Meals" Icon="icon_feed.png">
         <ShellContent Route="MealPage" ContentTemplate="{DataTemplate localMeal:MealPage}" /> 
     </FlyoutItem>
@@ -143,8 +139,12 @@
         <ShellContent Route="WorkoutExercisePage" ContentTemplate="{DataTemplate localWorkoutExercise:WorkoutExercisePage}" />
     </FlyoutItem>
 
-    <FlyoutItem Title="Bmi Counter" Style="{StaticResource FlyoutItemStyle}" Icon="icon_heart.png">
+    <FlyoutItem Title="Bmi Counter" Icon="icon_feed.png">
         <ShellContent Route="BmiPage" ContentTemplate="{DataTemplate localBmi:BmiPage}" />
+    </FlyoutItem>
+    
+    <FlyoutItem Title="Users" Icon="icon_feed.png">
+        <ShellContent Route="UserPage" ContentTemplate="{DataTemplate localMealUser:UserPage}" />
     </FlyoutItem>
 
     <FlyoutItem Title="About" Icon="icon_about.png">
