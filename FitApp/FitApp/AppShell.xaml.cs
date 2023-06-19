@@ -1,4 +1,5 @@
-﻿using FitApp.Views.ExerciseView;
+﻿using FitApp.Views;
+using FitApp.Views.ExerciseView;
 using FitApp.Views.FoodItemView;
 using FitApp.Views.MealFoodItemView;
 using FitApp.Views.MealView;
@@ -47,10 +48,14 @@ namespace FitApp
             Routing.RegisterRoute(nameof(NewWorkoutExercisePage), typeof(NewWorkoutExercisePage));
             Routing.RegisterRoute(nameof(WorkoutExerciseEditPage), typeof(WorkoutExerciseEditPage));
             Routing.RegisterRoute(nameof(WorkoutExerciseDetailsPage), typeof(WorkoutExerciseDetailsPage));
+
+            Routing.RegisterRoute(nameof(RegisterPage), typeof(RegisterPage));
         }
 
         private async void OnMenuItemClicked(object sender, EventArgs e)
         {
+            Config.IsLoggedIn = false;
+            Config.UserId = 0;
             await Shell.Current.GoToAsync("//LoginPage");
         }
     }

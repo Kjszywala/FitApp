@@ -225,3 +225,13 @@ C:\Users\kamil\Desktop\fitapp2\FitApp\FitApp\FitApp\obj\Debug\netstandard2.0\ref
 C:\Users\kamil\Desktop\fitapp2\FitApp\FitApp\FitApp\obj\Debug\netstandard2.0\FitApp.pdb
 C:\Users\kamil\Desktop\fitapp2\FitApp\FitApp\FitApp\obj\Debug\netstandard2.0\ref\FitApp.dll
 C:\Users\kamil\Desktop\fitapp2\FitApp\FitApp\FitApp\obj\Debug\netstandard2.0\Views\BmiView\BmiPage.xaml.g.cs
+C:\Users\kamil.szywala\Desktop\FitApp2\FitApp\FitApp\FitApp\obj\Debug\netstandard2.0\Views\BmiView\BmiPage.xaml.g.cs
+C:\Users\kamil.szywala\Desktop\FitApp2\FitApp\FitApp\FitApp\obj\Debug\netstandard2.0\Views\WorkoutExerciseView\NewWorkoutExercisePage.xaml.g.cs
+C:\Users\kamil.szywala\Desktop\FitApp2\FitApp\FitApp\FitApp\obj\Debug\netstandard2.0\Views\WorkoutExerciseView\WorkoutExerciseDetailsPage.xaml.g.cs
+C:\Users\kamil.szywala\Desktop\FitApp2\FitApp\FitApp\FitApp\obj\Debug\netstandard2.0\Views\WorkoutExerciseView\WorkoutExerciseEditPage.xaml.g.cs
+C:\Users\kamil.szywala\Desktop\FitApp2\FitApp\FitApp\FitApp\obj\Debug\netstandard2.0\Views\WorkoutExerciseView\WorkoutExercisePage.xaml.g.cs
+C:\Users\kamil.szywala\Desktop\FitApp2\FitApp\FitApp\FitApp\obj\Debug\netstandard2.0\Views\WorkoutPlanView\NewWorkoutPlanPage.xaml.g.cs
+C:\Users\kamil.szywala\Desktop\FitApp2\FitApp\FitApp\FitApp\obj\Debug\netstandard2.0\Views\WorkoutPlanView\WorkoutPlanDetailsPage.xaml.g.cs
+C:\Users\kamil.szywala\Desktop\FitApp2\FitApp\FitApp\FitApp\obj\Debug\netstandard2.0\Views\WorkoutPlanView\WorkoutPlanEditPage.xaml.g.cs
+C:\Users\kamil.szywala\Desktop\FitApp2\FitApp\FitApp\FitApp\obj\Debug\netstandard2.0\Views\WorkoutPlanView\WorkoutPlanPage.xaml.g.cs
+C:\Users\kamil.szywala\Desktop\FitApp2\FitApp\FitApp\FitApp\obj\Debug\netstandard2.0\Views\RegisterPage.xaml.g.cs
