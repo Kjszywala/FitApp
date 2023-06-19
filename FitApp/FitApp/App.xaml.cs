@@ -25,6 +25,7 @@ namespace FitApp
 
         protected override void OnStart()
         {
+            Shell.Current.GoToAsync("//LoginPage");
         }
 
         protected override void OnSleep()

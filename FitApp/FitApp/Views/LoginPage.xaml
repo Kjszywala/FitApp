@@ -7,6 +7,8 @@
              Shell.NavBarIsVisible="False">
     <ContentPage.Content>
         <StackLayout Spacing="3" Padding="15">
+            <Label Text="FittApp V1.0" HorizontalOptions="Center" FontSize="Large" Margin="0,5"/>
+            <Label Text="{Binding Error}" HorizontalOptions="Center" Margin="0,5"/>
             <Label Text="Login:" FontSize="Medium" />
             <Entry Text="{Binding Login, Mode=TwoWay}" FontSize="Medium" />
             <Label Text="Password" FontSize="Medium" />

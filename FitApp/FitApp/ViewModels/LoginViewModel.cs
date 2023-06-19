@@ -65,11 +65,13 @@ namespace FitApp.ViewModels
             var user = userModelService.GetItemsAsync().Result;
             foreach(var item in user)
             {
-                if (item.UserName.Contains(login))
+                if (item.UserName.Contains(Login))
                 {
                     if(item.Password == Password)
                     {
-                        await Shell.Current.GoToAsync($"//{nameof(ExercisePage)}");
+                        Config.IsLoggedIn = true;
+                        Config.UserId = item.UserID;
+                        await Shell.Current.GoToAsync(nameof(ExercisePage));
                     }
                     else
                     {

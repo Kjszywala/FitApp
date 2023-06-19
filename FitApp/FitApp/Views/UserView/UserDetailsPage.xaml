@@ -6,30 +6,32 @@
              xmlns:userviewmodel1="clr-namespace:FitApp.ViewModels.UsersViewModel"
              x:DataType="userviewmodel1:UserDetailsViewModel">
     <ContentPage.Content>
-        <StackLayout Spacing="20" Padding="15">
-            <Label Text="Exercise User name:" FontSize="Medium" />
-            <Label Text="{Binding UserName, Mode=TwoWay}" FontSize="Medium" />
-            <Label Text="Email:" FontSize="Medium" />
-            <Label Text="{Binding Email, Mode=TwoWay}" FontSize="Medium" />
-            <Label Text="First name::" FontSize="Medium" />
-            <Label Text="{Binding FirstName, Mode=TwoWay}" FontSize="Medium" Margin="0" />
-            <Label Text="Last name:" FontSize="Medium" />
-            <Label Text="{Binding LastName, Mode=TwoWay}"  FontSize="Medium" Margin="0" />
-            <Label Text="Gender:" FontSize="Medium" />
-            <Label Text="{Binding Gender, Mode=TwoWay}"  FontSize="Medium" Margin="0" />
-            <Label Text="Age" FontSize="Medium" />
-            <Label Text="{Binding Age, Mode=TwoWay}"  FontSize="Medium" Margin="0" />
-            <Label Text="Weight:" FontSize="Medium" />
-            <Label Text="{Binding Weight, Mode=TwoWay}"  FontSize="Medium" Margin="0" />
-            <Label Text="Height" FontSize="Medium" />
-            <Label Text="{Binding Height, Mode=TwoWay}"  FontSize="Medium" Margin="0" />
-            <Label Text="Activity level:" FontSize="Medium" />
-            <Label Text="{Binding ActivityLevel, Mode=TwoWay}"  FontSize="Medium" Margin="0" />
-            <StackLayout Orientation="Horizontal">
-                <Button Text="Cancel" Command="{Binding CancelCommand}" HorizontalOptions="FillAndExpand"></Button>
-                <Button Text="Delete" Command="{Binding DeleteCommand}" HorizontalOptions="FillAndExpand"></Button>
-                <Button Text="Edit" Command="{Binding AddSinCommand}" HorizontalOptions="FillAndExpand"></Button>
+        <ScrollView VerticalScrollBarVisibility="Always">
+            <StackLayout Spacing="20" Padding="15">
+                <Label Text="Exercise User name:" FontSize="Medium" />
+                <Label Text="{Binding UserName, Mode=TwoWay}" FontSize="Medium" />
+                <Label Text="Email:" FontSize="Medium" />
+                <Label Text="{Binding Email, Mode=TwoWay}" FontSize="Medium" />
+                <Label Text="First name::" FontSize="Medium" />
+                <Label Text="{Binding FirstName, Mode=TwoWay}" FontSize="Medium" Margin="0" />
+                <Label Text="Last name:" FontSize="Medium" />
+                <Label Text="{Binding LastName, Mode=TwoWay}"  FontSize="Medium" Margin="0" />
+                <Label Text="Gender:" FontSize="Medium" />
+                <Label Text="{Binding Gender, Mode=TwoWay}"  FontSize="Medium" Margin="0" />
+                <Label Text="Age" FontSize="Medium" />
+                <Label Text="{Binding Age, Mode=TwoWay}"  FontSize="Medium" Margin="0" />
+                <Label Text="Weight:" FontSize="Medium" />
+                <Label Text="{Binding Weight, Mode=TwoWay}"  FontSize="Medium" Margin="0" />
+                <Label Text="Height" FontSize="Medium" />
+                <Label Text="{Binding Height, Mode=TwoWay}"  FontSize="Medium" Margin="0" />
+                <Label Text="Activity level:" FontSize="Medium" />
+                <Label Text="{Binding ActivityLevel, Mode=TwoWay}"  FontSize="Medium" Margin="0" />
+                <StackLayout Orientation="Horizontal">
+                    <Button Text="Cancel" Command="{Binding CancelCommand}" HorizontalOptions="FillAndExpand"></Button>
+                    <Button Text="Delete" Command="{Binding DeleteCommand}" HorizontalOptions="FillAndExpand"></Button>
+                    <Button Text="Edit" Command="{Binding AddSinCommand}" HorizontalOptions="FillAndExpand"></Button>
+                </StackLayout>
             </StackLayout>
-        </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

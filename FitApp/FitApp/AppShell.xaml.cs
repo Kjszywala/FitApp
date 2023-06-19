@@ -58,5 +58,6 @@ namespace FitApp
             Config.UserId = 0;
             await Shell.Current.GoToAsync("//LoginPage");
         }
+
     }
 }
