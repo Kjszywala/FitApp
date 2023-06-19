@@ -33,8 +33,8 @@
                                     <ColumnDefinition Width="*" />
                                 </Grid.ColumnDefinitions>
                                 <Image Source="{Binding FlyoutItem.Icon}"
-                                   HeightRequest="24"
-                                   WidthRequest="24"
+                                   HeightRequest="80"
+                                   WidthRequest="80"
                                    VerticalOptions="Center" />
                                 <Label Text="{Binding FlyoutItem.Title}"
                                    TextColor="#333333"
@@ -48,12 +48,12 @@
                 </Setter>
             </Style>
             <Style x:Key="BaseStyle" TargetType="Element">
-                <Setter Property="Shell.BackgroundColor" Value="{StaticResource Primary}" />
+                <Setter Property="Shell.BackgroundColor" Value="#3a3a3a" />
                 <Setter Property="Shell.ForegroundColor" Value="White" />
                 <Setter Property="Shell.TitleColor" Value="White" />
                 <Setter Property="Shell.DisabledColor" Value="#B4FFFFFF" />
                 <Setter Property="Shell.UnselectedColor" Value="#95FFFFFF" />
-                <Setter Property="Shell.TabBarBackgroundColor" Value="{StaticResource Primary}" />
+                <Setter Property="Shell.TabBarBackgroundColor" Value="#3a3a3a" />
                 <Setter Property="Shell.TabBarForegroundColor" Value="White"/>
                 <Setter Property="Shell.TabBarUnselectedColor" Value="#95FFFFFF"/>
                 <Setter Property="Shell.TabBarTitleColor" Value="White"/>
@@ -80,7 +80,7 @@
                             </VisualState>
                             <VisualState x:Name="Selected">
                                 <VisualState.Setters>
-                                    <Setter Property="BackgroundColor" Value="{StaticResource Primary}" />
+                                    <Setter Property="BackgroundColor" Value="#393737" />
                                 </VisualState.Setters>
                             </VisualState>
                         </VisualStateGroup>
@@ -111,48 +111,48 @@
         FlyoutDisplayOptions="AsMultipleItems" will create a separate flyout item for each child element    
         https://docs.microsoft.com/dotnet/api/xamarin.forms.shellgroupitem.flyoutdisplayoptions?view=xamarin-forms
     -->
-    <FlyoutItem Title="Exercises" Icon="icon_feed.png">
+    <FlyoutItem Title="Exercises" Icon="Assets/Content/exercises.png">
         <ShellContent Route="ExercisePage" ContentTemplate="{DataTemplate localExercise:ExercisePage}" />
     </FlyoutItem>
 
-    <FlyoutItem Title="Food Items" Icon="icon_feed.png">
+    <FlyoutItem Title="Food Items" Icon="Assets/Content/foodItems.png">
         <ShellContent Route="FoodItemPage" ContentTemplate="{DataTemplate localFoodItem:FoodItemPage}" />
     </FlyoutItem>
 
-    <FlyoutItem Title="Meal Food Items" Icon="icon_feed.png">
+    <FlyoutItem Title="Meal Food Items" Icon="Assets/Content/mealFoodItems.png">
         <ShellContent Route="MealFoodItemPage" ContentTemplate="{DataTemplate localMealFoodItem:MealFoodItemPagePage}" />
     </FlyoutItem>
 
-    <FlyoutItem Title="Meals" Icon="icon_feed.png">
-        <ShellContent Route="MealPage" ContentTemplate="{DataTemplate localMeal:MealPage}" /> 
+    <FlyoutItem Title="Meals" Icon="Assets/Content/meals.png">
+        <ShellContent Route="MealPage" ContentTemplate="{DataTemplate localMeal:MealPage}" />
     </FlyoutItem>
 
-    <FlyoutItem Title="Workouts" Icon="icon_feed.png">
+    <FlyoutItem Title="Workouts" x:Name="workout" Icon="Assets/Content/workouts.png">
         <ShellContent Route="WorkoutPage" ContentTemplate="{DataTemplate localWorkout:WorkoutPage}" />
     </FlyoutItem>
 
-    <FlyoutItem Title="Workout Plans" Icon="icon_feed.png">
+    <FlyoutItem Title="Workout Plans" Icon="Assets/Content/plan.png">
         <ShellContent Route="WorkoutPlanPage" ContentTemplate="{DataTemplate localWorkoutPlan:WorkoutPlanPage}" />
     </FlyoutItem>
 
-    <FlyoutItem Title="Workout Exercise" Icon="icon_feed.png">
+    <FlyoutItem Title="Workout Exercise" Icon="Assets/Content/weights.png">
         <ShellContent Route="WorkoutExercisePage" ContentTemplate="{DataTemplate localWorkoutExercise:WorkoutExercisePage}" />
     </FlyoutItem>
 
-    <FlyoutItem Title="Bmi Counter" Icon="icon_feed.png">
+    <FlyoutItem Title="Bmi Counter" Icon="Assets/Content/bmi.png">
         <ShellContent Route="BmiPage" ContentTemplate="{DataTemplate localBmi:BmiPage}" />
     </FlyoutItem>
-    
-    <FlyoutItem Title="Users" Icon="icon_feed.png">
+
+    <FlyoutItem Title="Users" Icon="Assets/Content/users.png">
         <ShellContent Route="UserPage" ContentTemplate="{DataTemplate localMealUser:UserPage}" />
     </FlyoutItem>
 
-    <FlyoutItem Title="About" Icon="icon_about.png">
+    <FlyoutItem Title="About" Icon="Assets/Content/about.png">
         <ShellContent Route="AboutPage" ContentTemplate="{DataTemplate local:AboutPage}" />
     </FlyoutItem>
 
     <!-- When the Flyout is visible this will be a menu item you can tie a click behavior to  -->
-    <MenuItem Text="Logout" StyleClass="MenuItemLayoutStyle" Clicked="OnMenuItemClicked">
+    <MenuItem Text="Logout" IconImageSource="Assets/Content/logout.png" StyleClass="MenuItemLayoutStyle" Clicked="OnMenuItemClicked">
     </MenuItem>
 
     <!--

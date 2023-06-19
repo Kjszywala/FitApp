@@ -4,16 +4,21 @@
              x:Class="FitApp.Views.ExerciseView.NewExercisePage"
              Shell.PresentationMode="ModalAnimated"
              Title="New Exercise" >
-    <ContentPage.Content>
-        <StackLayout Spacing="3" Padding="15">
-            <Label Text="Exercise Name" FontSize="Medium" />
-            <Entry Text="{Binding ExerciseName, Mode=TwoWay}" FontSize="Medium" />
-            <Label Text="Description" FontSize="Medium" />
-            <Entry Text="{Binding ExerciseDescription, Mode=TwoWay}" FontSize="Medium" />
-            <Label Text="Exercise Type" FontSize="Medium" />
-            <Editor Text="{Binding ExerciseType, Mode=TwoWay}" AutoSize="TextChanges" FontSize="Medium" Margin="0" />
-            <Label Text="Muscle Group" FontSize="Medium" />
-            <Editor Text="{Binding MuscleGroup, Mode=TwoWay}" AutoSize="TextChanges" FontSize="Medium" Margin="0" />
+    <ContentPage.Content VerticalOptions="FillAndExpand">
+        <StackLayout Spacing="3" Padding="15" >
+            <Image WidthRequest="200" HeightRequest="200" Source="Assets/Content/trener.png" />
+            <BoxView HeightRequest="1" BackgroundColor="#393737" HorizontalOptions="FillAndExpand"></BoxView>
+            <Label Text="Exercise Name" FontSize="Medium" HorizontalOptions="Center" />
+            <Entry Text="{Binding ExerciseName, Mode=TwoWay}" WidthRequest="200" HorizontalOptions="Center" FontSize="Medium" />
+            <BoxView HeightRequest="1" BackgroundColor="#393737" HorizontalOptions="FillAndExpand"></BoxView>
+            <Label Text="Description" FontSize="Medium" HorizontalOptions="Center" />
+            <Entry Text="{Binding ExerciseDescription, Mode=TwoWay}" WidthRequest="200" HorizontalOptions="Center" FontSize="Medium" />
+            <BoxView HeightRequest="1" BackgroundColor="#393737" HorizontalOptions="FillAndExpand"></BoxView>
+            <Label Text="Exercise Type" FontSize="Medium" HorizontalOptions="Center" />
+            <Editor Text="{Binding ExerciseType, Mode=TwoWay}" WidthRequest="200" HorizontalOptions="Center" AutoSize="TextChanges" FontSize="Medium" Margin="0" />
+            <BoxView HeightRequest="1" BackgroundColor="#393737" HorizontalOptions="FillAndExpand"></BoxView>
+            <Label Text="Muscle Group" FontSize="Medium" HorizontalOptions="Center" />
+            <Editor Text="{Binding MuscleGroup, Mode=TwoWay}" WidthRequest="200" HorizontalOptions="Center" AutoSize="TextChanges" FontSize="Medium" Margin="0" />
             <StackLayout Orientation="Horizontal">
                 <Button Text="Save" IsEnabled="true" Command="{Binding SaveCommand}" HorizontalOptions="FillAndExpand"></Button>
                 <Button Text="Cancel" Command="{Binding CancelCommand}" HorizontalOptions="FillAndExpand"></Button>

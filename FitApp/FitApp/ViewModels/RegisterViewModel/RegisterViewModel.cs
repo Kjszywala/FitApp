@@ -126,7 +126,6 @@ namespace FitApp.ViewModels.RegisterViewModel
                 if(item.UserName.Trim() == UserName.Trim())
                 {
                     Error = "User name already exist!";
-                    await Shell.Current.GoToAsync(nameof(RegisterPage));
                     return;
                 }
             }

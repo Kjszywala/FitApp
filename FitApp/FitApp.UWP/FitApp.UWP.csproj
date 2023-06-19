@@ -104,6 +104,30 @@
     </AppxManifest>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\Content\about.png" />
+    <Content Include="Assets\Content\exercises.png" />
+    <Content Include="Assets\Content\foodItems.png" />
+    <Content Include="Assets\Content\jaskulator.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Assets\Content\logout.png" />
+    <Content Include="Assets\Content\mealFoodItems.png" />
+    <Content Include="Assets\Content\meals.png" />
+    <Content Include="Assets\Content\bmi.png" />
+    <Content Include="Assets\Content\foodItem10.png" />
+    <Content Include="Assets\Content\mealsea.png" />
+    <Content Include="Assets\Content\Arnie.png" />
+    <Content Include="Assets\Content\fruits.png" />
+    <Content Include="Assets\Content\fat.png" />
+    <Content Include="Assets\Content\plan1.png" />
+    <Content Include="Assets\Content\plank.png" />
+    <Content Include="Assets\Content\trener.png" />
+    <Content Include="Assets\Content\plan.png" />
+    <Content Include="Assets\Content\users.png" />
+    <Content Include="Assets\Content\weight-48.png" />
+    <Content Include="Assets\Content\weights.png" />
+    <Content Include="Assets\Content\workoutExercises.png" />
+    <Content Include="Assets\Content\workouts.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LargeTile.scale-100.png" />
     <Content Include="Assets\LargeTile.scale-200.png" />

@@ -4,12 +4,13 @@
              xmlns:viewmodels="clr-namespace:FitApp.ViewModels" 
              x:DataType="viewmodels:LoginViewModel"
              x:Class="FitApp.Views.LoginPage"
-             Shell.NavBarIsVisible="False">
+             Shell.NavBarIsVisible="False"
+             BackgroundImageSource="Assets/Content/jaskulator.png">
     <ContentPage.Content>
         <StackLayout Spacing="3" Padding="15">
-            <Label Text="FittApp V1.0" HorizontalOptions="Center" FontSize="Large" Margin="0,5"/>
+            <Label Text="FittApp V1.0" FontSize="Large" Margin="0,5"/>
             <Label Text="{Binding Error}" HorizontalOptions="Center" FontSize="Medium" Margin="0,5" TextColor="Red"/>
-            <Label Text="Login:" FontSize="Medium" HorizontalOptions="Center"/>
+            <Label Text="Login:" FontSize="Medium" Margin="0,60,0,0" HorizontalOptions="Center"/>
             <Entry Text="{Binding Login, Mode=TwoWay}" FontSize="Medium" HorizontalOptions="Center" WidthRequest="250"/>
             <Label Text="Password" FontSize="Medium" HorizontalOptions="Center"/>
             <Entry Text="{Binding Password, Mode=TwoWay}" FontSize="Medium" IsPassword="True" WidthRequest="250" HorizontalOptions="Center"/>

@@ -6,22 +6,27 @@
              x:Class="FitApp.Views.WorkoutExerciseView.NewWorkoutExercisePage">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Sets" FontSize="Medium" />
-            <Entry Text="{Binding Sets, Mode=TwoWay}" FontSize="Medium" />
-            <Label Text="Reps" FontSize="Medium" />
-            <Entry Text="{Binding Reps, Mode=TwoWay}" FontSize="Medium" />
-            <Label Text="Weight" FontSize="Medium" />
-            <Entry Text="{Binding Weight, Mode=TwoWay}" FontSize="Medium" />
+            <Image WidthRequest="200" HeightRequest="200" Source="Assets/Content/plank.png" />
+            <Label Text="Sets" FontSize="Medium" HorizontalOptions="Center"/>
+            <Entry Text="{Binding Sets, Mode=TwoWay}" FontSize="Medium"  WidthRequest="200"  HorizontalOptions="Center"/>
+            <BoxView HeightRequest="1" BackgroundColor="#393737" HorizontalOptions="FillAndExpand"></BoxView>
+            <Label Text="Reps" FontSize="Medium" HorizontalOptions="Center"/>
+            <Entry Text="{Binding Reps, Mode=TwoWay}" FontSize="Medium"  WidthRequest="200"  HorizontalOptions="Center"/>
+            <BoxView HeightRequest="1" BackgroundColor="#393737" HorizontalOptions="FillAndExpand"></BoxView>
+            <Label Text="Weight" FontSize="Medium" HorizontalOptions="Center"/>
+            <Entry Text="{Binding Weight, Mode=TwoWay}" FontSize="Medium"  WidthRequest="200"  HorizontalOptions="Center"/>
+            <BoxView HeightRequest="1" BackgroundColor="#393737" HorizontalOptions="FillAndExpand"></BoxView>
             <Picker Title="Exercises" 
                     ItemsSource="{Binding Exercises}" 
                     ItemDisplayBinding="{Binding ExerciseName}" 
                     SelectedItem="{Binding SelectedExercise}" 
-                    FontSize="Medium" Margin="0" />
+                    FontSize="Medium" Margin="0"  WidthRequest="200"  HorizontalOptions="Center"/>
+            <BoxView HeightRequest="1" BackgroundColor="#393737" HorizontalOptions="FillAndExpand"></BoxView>
             <Picker Title="Workouts" 
                     ItemsSource="{Binding Workouts}"
                     ItemDisplayBinding="{Binding WorkoutName}"
                     SelectedItem="{Binding SelectedWorkout}"
-                    FontSize="Medium" Margin="0" />
+                    FontSize="Medium" Margin="0"  WidthRequest="200"  HorizontalOptions="Center"/>
             <StackLayout Orientation="Horizontal">
                 <Button Text="Save" IsEnabled="true" Command="{Binding SaveCommand}" HorizontalOptions="FillAndExpand"></Button>
                 <Button Text="Cancel" Command="{Binding CancelCommand}" HorizontalOptions="FillAndExpand"></Button>

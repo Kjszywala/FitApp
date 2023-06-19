@@ -5,22 +5,30 @@
              x:DataType="workoutexercisesviewmodel:WorkoutExercisesDetailsViewModel"
              x:Class="FitApp.Views.WorkoutExerciseView.WorkoutExerciseDetailsPage">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Sets" FontSize="Medium" />
-            <Label Text="{Binding Sets, Mode=TwoWay}" FontSize="Medium" Margin="0" />
-            <Label Text="Reps" FontSize="Medium" />
-            <Label Text="{Binding Reps, Mode=TwoWay}" FontSize="Medium" Margin="0" />
-            <Label Text="Weight" FontSize="Medium" />
-            <Label Text="{Binding Weight, Mode=TwoWay}" FontSize="Medium" Margin="0" />
-            <Label Text="Exercise:" FontSize="Medium" />
-            <Label Text="{Binding SelectedExerciseName, Mode=TwoWay}" FontSize="Medium" />
-            <Label Text="Workout" FontSize="Medium" />
-            <Label Text="{Binding SelectedWorkoutName, Mode=TwoWay}" FontSize="Medium" />
-            <StackLayout Orientation="Horizontal">
-                <Button Text="Cancel" Command="{Binding CancelCommand}" HorizontalOptions="FillAndExpand"></Button>
-                <Button Text="Delete" Command="{Binding DeleteCommand}" HorizontalOptions="FillAndExpand"></Button>
-                <Button Text="Edit" Command="{Binding AddSinCommand}" HorizontalOptions="FillAndExpand"></Button>
+        <ScrollView VerticalScrollBarVisibility="Always">
+            <StackLayout>
+                <Image WidthRequest="200" HeightRequest="200" Source="Assets/Content/plank.png" />
+                <BoxView HeightRequest="1" BackgroundColor="#393737" HorizontalOptions="FillAndExpand"></BoxView>
+                <Label Text="Sets" FontSize="Medium" HorizontalOptions="Center"/>
+                <Label Text="{Binding Sets, Mode=TwoWay}" FontSize="Medium" Margin="0" HorizontalOptions="Center"/>
+                <BoxView HeightRequest="1" BackgroundColor="#393737" HorizontalOptions="FillAndExpand"></BoxView>
+                <Label Text="Reps" FontSize="Medium" HorizontalOptions="Center"/>
+                <Label Text="{Binding Reps, Mode=TwoWay}" FontSize="Medium" Margin="0" HorizontalOptions="Center"/>
+                <BoxView HeightRequest="1" BackgroundColor="#393737" HorizontalOptions="FillAndExpand"></BoxView>
+                <Label Text="Weight" FontSize="Medium" HorizontalOptions="Center"/>
+                <Label Text="{Binding Weight, Mode=TwoWay}" FontSize="Medium" Margin="0" HorizontalOptions="Center"/>
+                <BoxView HeightRequest="1" BackgroundColor="#393737" HorizontalOptions="FillAndExpand"></BoxView>
+                <Label Text="Exercise:" FontSize="Medium" HorizontalOptions="Center"/>
+                <Label Text="{Binding SelectedExerciseName, Mode=TwoWay}" FontSize="Medium" HorizontalOptions="Center"/>
+                <BoxView HeightRequest="1" BackgroundColor="#393737" HorizontalOptions="FillAndExpand"></BoxView>
+                <Label Text="Workout" FontSize="Medium" HorizontalOptions="Center"/>
+                <Label Text="{Binding SelectedWorkoutName, Mode=TwoWay}" FontSize="Medium" HorizontalOptions="Center"/>
+                <StackLayout Orientation="Horizontal">
+                    <Button Text="Cancel" Command="{Binding CancelCommand}" HorizontalOptions="FillAndExpand"></Button>
+                    <Button Text="Delete" Command="{Binding DeleteCommand}" HorizontalOptions="FillAndExpand"></Button>
+                    <Button Text="Edit" Command="{Binding AddSinCommand}" HorizontalOptions="FillAndExpand"></Button>
+                </StackLayout>
             </StackLayout>
-        </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

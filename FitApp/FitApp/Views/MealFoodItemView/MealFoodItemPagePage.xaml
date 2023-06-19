@@ -22,32 +22,35 @@
     <ContentPage.ToolbarItems>
         <ToolbarItem Text="Add" Command="{Binding AddItemCommand}" />
     </ContentPage.ToolbarItems>
-
-    <RefreshView x:DataType="local:MealFoodItemsViewModel" Command="{Binding LoadItemsCommand}" IsRefreshing="{Binding IsBusy, Mode=TwoWay}">
-        <CollectionView x:Name="ItemsListView"
+    <StackLayout>
+        <Image WidthRequest="200" HeightRequest="200" Source="Assets/Content/fruits.png" />
+        <RefreshView x:DataType="local:MealFoodItemsViewModel" Command="{Binding LoadItemsCommand}" IsRefreshing="{Binding IsBusy, Mode=TwoWay}">
+            <CollectionView x:Name="ItemsListView"
                 ItemsSource="{Binding Items}"
                 SelectionMode="None">
-            <CollectionView.ItemTemplate>
-                <DataTemplate>
-                    <StackLayout Padding="10" x:DataType="model:MealFoodItems">
-                        <Label Text="{Binding ServingSize}" 
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout Padding="10" x:DataType="model:MealFoodItems">
+                            <BoxView HeightRequest="1" BackgroundColor="#393737" HorizontalOptions="FillAndExpand"></BoxView>
+                            <Label Text="{Binding ServingSize}" 
                             LineBreakMode="NoWrap"
                             Style="{DynamicResource LabelTitleStyle}"
-                            FontSize="13" />
-                        <Label Text="{Binding ServingsPerMeal}" 
+                            FontSize="13" HorizontalOptions="Center" />
+                            <Label Text="{Binding ServingsPerMeal}" 
                             LineBreakMode="NoWrap"
                             Style="{DynamicResource LabelDetailStyle}"
-                            FontSize="13" />
-                        <StackLayout.GestureRecognizers>
-                            <TapGestureRecognizer 
+                            FontSize="13" HorizontalOptions="Center" />
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer 
                                 NumberOfTapsRequired="1"
-                                Command="{Binding Source={RelativeSource AncestorType={x:Type local:MealFoodItemsViewModel}}, Path=ItemTapped}"		
+                                Command="{Binding Source={RelativeSource AncestorType={x:Type local:MealFoodItemsViewModel}}, Path=ItemTapped}"     
                                 CommandParameter="{Binding .}">
-                            </TapGestureRecognizer>
-                        </StackLayout.GestureRecognizers>
-                    </StackLayout>
-                </DataTemplate>
-            </CollectionView.ItemTemplate>
-        </CollectionView>
-    </RefreshView>
+                                </TapGestureRecognizer>
+                            </StackLayout.GestureRecognizers>
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </RefreshView>
+    </StackLayout>
 </ContentPage>

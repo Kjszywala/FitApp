@@ -6,20 +6,25 @@
              x:Class="FitApp.Views.MealFoodItemView.MealFoodItemEditPage">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Serving Size" FontSize="Medium" />
-            <Entry Text="{Binding ServingSize, Mode=TwoWay}" FontSize="Medium" />
-            <Label Text="Servings Per Meal" FontSize="Medium" />
-            <Entry Text="{Binding ServingsPerMeal, Mode=TwoWay}" FontSize="Medium" />
+            <Image WidthRequest="200" HeightRequest="200" Source="Assets/Content/fruits.png" />
+            <BoxView HeightRequest="1" BackgroundColor="#393737" HorizontalOptions="FillAndExpand"></BoxView>
+            <Label Text="Serving Size" FontSize="Medium" HorizontalOptions="Center"/>
+            <Entry Text="{Binding ServingSize, Mode=TwoWay}" FontSize="Medium" WidthRequest="200" HorizontalOptions="Center"/>
+            <BoxView HeightRequest="1" BackgroundColor="#393737" HorizontalOptions="FillAndExpand"></BoxView>
+            <Label Text="Servings Per Meal" FontSize="Medium" HorizontalOptions="Center"/>
+            <Entry Text="{Binding ServingsPerMeal, Mode=TwoWay}" FontSize="Medium"  WidthRequest="200" HorizontalOptions="Center"/>
+            <BoxView HeightRequest="1" BackgroundColor="#393737" HorizontalOptions="FillAndExpand"></BoxView>
             <Picker Title="Food Items" 
                     ItemsSource="{Binding FoodItems}" 
                     ItemDisplayBinding="{Binding FoodItemName}" 
                     SelectedItem="{Binding SelectedFoodItem}" 
-                    FontSize="Medium" Margin="0" />
+                    FontSize="Medium" Margin="0" HorizontalOptions="Center" WidthRequest="200"/>
+            <BoxView HeightRequest="1" BackgroundColor="#393737" HorizontalOptions="FillAndExpand"></BoxView>
             <Picker Title="Meals" 
                     ItemsSource="{Binding Meals}"
                     ItemDisplayBinding="{Binding MealName}"
                     SelectedItem="{Binding SelectedMeal}"
-                    FontSize="Medium" Margin="0" />
+                    FontSize="Medium" Margin="0" HorizontalOptions="Center" WidthRequest="200"/>
             <StackLayout Orientation="Horizontal">
                 <Button Text="Save" IsEnabled="true" Command="{Binding UpdateCommand}" HorizontalOptions="FillAndExpand"></Button>
                 <Button Text="Cancel" Command="{Binding CancelCommand}" HorizontalOptions="FillAndExpand"></Button>
