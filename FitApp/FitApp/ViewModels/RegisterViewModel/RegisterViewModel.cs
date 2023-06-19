@@ -123,10 +123,11 @@ namespace FitApp.ViewModels.RegisterViewModel
             var users = userModelService.GetItemsAsync().Result;
             foreach(var item in users)
             {
-                if(item.UserName.Trim() == this.UserName.Trim())
+                if(item.UserName.Trim() == UserName.Trim())
                 {
-                    this.Error = "User name already exist!";
-                    await Shell.Current.GoToAsync($"//{nameof(RegisterPage)}");
+                    Error = "User name already exist!";
+                    await Shell.Current.GoToAsync(nameof(RegisterPage));
+                    return;
                 }
             }
             var user = new Users()
